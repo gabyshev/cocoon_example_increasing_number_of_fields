@@ -1,0 +1,5 @@
+.nested-fields
+  = f.simple_fields_for :photos do |photo|
+    = render 'photo_fields', f: photo
+= link_to_remove_association 'remove photos', f
+br

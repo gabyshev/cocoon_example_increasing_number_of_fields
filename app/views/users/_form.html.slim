@@ -3,6 +3,12 @@
 
   .form-inputs
     = f.input :name
+  
+  .form-inputs
+    = f.simple_fields_for :galleries do |gallery|
+      = render 'gallery_fields', f: gallery
+    .links
+      = link_to_add_association 'add gallery', f, :galleries
 
   .form-actions
     = f.button :submit
